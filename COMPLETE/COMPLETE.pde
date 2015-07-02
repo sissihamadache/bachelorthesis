@@ -1,3 +1,18 @@
+/////////////////////////INFO//////////////////////////////
+//PRESS A FOR 3D SHAPED PLANT ; B FOR 2D ; C FOR 1D
+//=======================================IF YOU'VE PRESSED A:
+//GENERATE BUGS BY CLICKING;
+//KILL THEM BY CLICKING ON THEM AGAIN
+//RIGHT CLICK THEM TO DESTROY THEIR PATH
+//PRESS F TO CHANGE THE FLOWER TYPE
+//PRESS P TO STOP THE BUGS FROM MOVING
+//PRESS R TO IMPORT TO PRINTABLE FILE
+//=======================================IF YOU'VE PRESSED B:
+//GENERATE LEAVES BY KLICKING
+//=======================================IF YOU'VE PRESSED C:
+//CREATE STRAWS BY CLICKING 
+
+
 import peasy.*;
 import java.io.*;
 import java.awt.Color;
@@ -9,6 +24,7 @@ import nervoussystem.obj.*;
 int t;
 PeasyCam cam;
 boolean record;
+boolean changeFlower;
 ///////////////////////////////HALM
 int count=1; int lcount=1;
 Halm halm;
@@ -181,6 +197,12 @@ void keyReleased(){
         go=false;
       else 
         go=true;
+    }
+    if(key=='f'){
+      if(changeFlower)
+        changeFlower=false;
+      else 
+        changeFlower=true;
     }
     if(key==' '){
       planty.addPath(index);

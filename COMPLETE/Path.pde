@@ -130,21 +130,35 @@
         if(i%3==0)
           drawLeaf(1,0,0,10,PI/4,-1);
         if(i%5==0)    
-          drawLeaf(1,0,0,5,PI/4,1);
+          drawLeaf(1,0,0,5,PI/2,1);
         if(i%7==0)
-          drawLeaf(1,0,0,7,PI/4,1);
+          drawLeaf(1,0,0,7,PI/6,1);
         if(i%11==0)
-          drawLeaf(1,0,0,6,PI/4,1);
+          drawLeaf(1,0,0,6,PI,1);
         if(i%13==0)
-          drawLeaf(1,0,0,7,PI/4,1);
+          drawLeaf(1,0,0,7,PI/8,1);
+      }
+      
+      if(i%139==20){
+         if(!changeFlower){
+          scale(0.02);
+          pushMatrix();
+          rotateX(radians(90));
+          drawB();
+          popMatrix();
+        }
       }
       popMatrix();
-      pushMatrix();
-      translate(p.x+2,p.y,p.z);
-      rotate(radians(90));
-      if(i%139==10)
-      redrawImage();
-      popMatrix();
+      if(i%139==20){
+        if(changeFlower){
+          pushMatrix();
+          translate(p.x+2,p.y,p.z);
+          rotate(radians(90));
+          redrawImage();
+          popMatrix();
+        }
+      }
+     // popMatrix();
     }
     popStyle(); //popMatrix();
   }

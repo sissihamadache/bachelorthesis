@@ -36,7 +36,7 @@ class Plant {
     translate(xp, yp, zp);
     pushMatrix();
     if (record) {
-      beginRecord("nervoussystem.obj.OBJExport", "hmm.obj");
+      beginRecord("nervoussystem.obj.OBJExport", "B.obj");
     }
     for (int i = 0; i < paths.size(); i ++) {
       Path p = (Path) paths.get(i);

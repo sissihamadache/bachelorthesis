@@ -2,7 +2,6 @@
   
   float factor = TWO_PI / 20.0;
   float bx, by, bz;
-
   PVector[] sphereVertexPoints;
   
  
