@@ -1,5 +1,6 @@
 /////////////////////////INFO//////////////////////////////
 //PRESS A FOR 3D SHAPED PLANT ; B FOR 2D ; C FOR 1D
+//UNCOMMENT THE LAST LINE IN SETUP FOR 3D VIEW
 //=======================================IF YOU'VE PRESSED A:
 //GENERATE BUGS BY CLICKING;
 //KILL THEM BY CLICKING ON THEM AGAIN
@@ -75,8 +76,9 @@ void setup() {
   planty.init();
   
   ////////////////////////////////////CAM
-  //cam = new PeasyCam(this, 0, 0, 0, 30);
   println("Press A to create spherical plant, B to make a wreath and C to grow a flower");
+
+  //cam = new PeasyCam(this, 0, 0, 0, 30);
 }
 
 void menu1(){  
