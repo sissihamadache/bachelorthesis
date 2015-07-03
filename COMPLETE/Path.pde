@@ -140,17 +140,19 @@
       }
       
       if(i%139==20){
-         if(!changeFlower){
+         if(changeFlower){
+          translate(-1,-1,-1);
           scale(0.02);
           pushMatrix();
-          rotateX(radians(90));
+          rotateY(radians(135));
+          rotateZ(radians(45));
           drawB();
           popMatrix();
         }
       }
       popMatrix();
       if(i%139==20){
-        if(changeFlower){
+        if(!changeFlower){
           pushMatrix();
           translate(p.x+2,p.y,p.z);
           rotate(radians(90));
